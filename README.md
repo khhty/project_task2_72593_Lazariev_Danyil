@@ -169,7 +169,7 @@ All endpoints were tested using Postman:
 - GET after DELETE – verify deletion
 H2 console was used to verify database content.
 
-![H2 Database](screenshots/h2_database.png)
+![H2 Database](screenshots/h2_database.jpg)
 ---
 
 # Result
