@@ -112,6 +112,28 @@ HTTP Status: 200 OK
 ![GET by ID](screenshots/get1.png)
 ---
 
+# Get All Products – GET
+
+GET /api/v1/products
+
+Result example:
+
+{
+"id": 1,
+"name": "First Product"
+},
+{
+"id": 2,
+"name": "Second Product"
+}
+
+HTTP Status: 200 OK
+
+![GET All Products](screenshots/get_all.png)
+
+---
+
+
 # Update Product – PUT
 
 PUT /api/v1/products/1

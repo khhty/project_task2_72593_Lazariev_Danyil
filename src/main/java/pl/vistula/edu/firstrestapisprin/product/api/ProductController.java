@@ -8,6 +8,7 @@ import pl.vistula.edu.firstrestapisprin.product.api.request.ProductRequest;
 import pl.vistula.edu.firstrestapisprin.product.api.response.ProductResponse;
 import pl.vistula.edu.firstrestapisprin.product.service.ProductService;
 import pl.vistula.edu.firstrestapisprin.product.api.request.UpdateProductRequest;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/products")
@@ -29,6 +30,12 @@ public class ProductController {
     public ResponseEntity<ProductResponse> find(@PathVariable Long id) {
         ProductResponse productResponse = productService.find(id);
         return ResponseEntity.ok(productResponse);
+    }
+
+    @GetMapping
+    @Operation(summary = "Get all products")
+    public ResponseEntity<List<ProductResponse>> getAll() {
+        return ResponseEntity.ok(productService.findAll());
     }
     @PutMapping("/{id}")
     @Operation(summary = "Update product")
